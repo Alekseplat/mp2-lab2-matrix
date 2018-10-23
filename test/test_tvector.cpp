@@ -31,12 +31,20 @@ TEST(TVector, can_create_copied_vector)
 
 TEST(TVector, copied_vector_is_equal_to_source_one)
 {
-  ADD_FAILURE();
+	const int Size = 10;
+	TVector<int> A(Size), B(Size);
+	for (int i = 0; i < Size; i++)
+	{
+		A[i] = i * 4;
+	}
+	B = A;
+
+	EXPECT_EQ(A, B);
 }
 
 TEST(TVector, copied_vector_has_its_own_memory)
 {
-  ADD_FAILURE();
+	TVector<int> v(4);
 }
 
 TEST(TVector, can_get_size)
@@ -63,17 +71,20 @@ TEST(TVector, can_set_and_get_element)
 
 TEST(TVector, throws_when_set_element_with_negative_index)
 {
-  ADD_FAILURE();
+	TVector <int> v(4, 2);
+	ASSERT_ANY_THROW(v[-3]);
 }
 
 TEST(TVector, throws_when_set_element_with_too_large_index)
 {
-  ADD_FAILURE();
+	TVector <int> v(4, 2);
+	ASSERT_ANY_THROW(v[1000]);
 }
 
 TEST(TVector, can_assign_vector_to_itself)
 {
-  ADD_FAILURE();
+	TVector <int> v(4, 2);
+	ASSERT_NO_THROW(v=v);
 }
 
 TEST(TVector, can_assign_vectors_of_equal_size)

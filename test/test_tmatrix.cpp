@@ -26,7 +26,7 @@ TEST(TMatrix, can_create_copied_matrix)
 
 TEST(TMatrix, copied_matrix_is_equal_to_source_one)
 {
-  ADD_FAILURE();
+  
 }
 
 TEST(TMatrix, copied_matrix_has_its_own_memory)
@@ -36,7 +36,15 @@ TEST(TMatrix, copied_matrix_has_its_own_memory)
 
 TEST(TMatrix, can_get_size)
 {
-  ADD_FAILURE();
+	const int Size = 10;
+	TVector<int> A(Size), B(Size);
+	for (int i = 0; i < Size; i++)
+	{
+		A[i] = i * 4;
+	}
+	B = A;
+
+	EXPECT_EQ(A, B);
 }
 
 TEST(TMatrix, can_set_and_get_element)
