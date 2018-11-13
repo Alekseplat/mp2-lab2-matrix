@@ -204,7 +204,5 @@ d:\lexa\mp2-lab2-matrix\gtest\gtest.h(10020): warning C4996: 'std::tr1': warning
               T=std::tuple<>
           ]
   Создание кода...
-d:\lexa\mp2-lab2-matrix\include\utmatrix.h(122): warning C4715: TVector<int>::operator==: значение возвращается не при всех путях выполнения
-d:\lexa\mp2-lab2-matrix\include\utmatrix.h(122): warning C4715: TVector<int>::operator==: значение возвращается не при всех путях выполнения
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (sample_utmatrix.vcxproj, test_utmatrix.vcxproj).  Это может привести к ошибкам очистки и перестроения.
   test_utmatrix.vcxproj -> D:\Lexa\mp2-lab2-matrix\sln\vc10\Debug\test_utmatrix.exe
